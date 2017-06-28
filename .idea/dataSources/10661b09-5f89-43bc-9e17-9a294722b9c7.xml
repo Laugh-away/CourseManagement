@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="electivecoursedb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="electivecoursedb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="express"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="init"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="root"/>
+    <schema id="8" parent="1" name="testejb"/>
+    <schema id="9" parent="1" name="wuliu"/>
+    <schema id="10" parent="1" name="db"/>
+    <schema id="11" parent="1" name="xuanke_db"/>
+    <table id="12" parent="2" name="course"/>
+    <table id="13" parent="2" name="guider"/>
+    <table id="14" parent="2" name="manager"/>
+    <table id="15" parent="2" name="student"/>
+    <table id="16" parent="2" name="studentcourse"/>
+    <table id="17" parent="2" name="teacher"/>
+    <column id="18" parent="12" name="cid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="12" name="coursename">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="12" name="coursebyteacher">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="12" name="coursestarttime">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="12" name="courseendtime">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="12" name="coursepoint">
+      <Position>6</Position>
+      <Comment>课程学分</Comment>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="12" name="coursegalleryful">
+      <Position>7</Position>
+      <Comment>开课人数</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="25" parent="12" name="PRIMARY">
+      <ColNames>cid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="13" name="gid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="13" name="guidename">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="13" name="guidepassword">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="29" parent="13" name="PRIMARY">
+      <ColNames>gid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="14" name="mid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="14" name="managername">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="14" name="managerpassword">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="33" parent="14" name="PRIMARY">
+      <ColNames>mid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="15" name="sid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="15" name="studentname">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="15" name="studentpassword">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="15" name="studentnumber">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="15" name="studentsex">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="15" name="studentclass">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="15" name="PRIMARY">
+      <ColNames>sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="16" name="scid">
+      <Position>1</Position>
+      <Comment>学生课程中间表的id</Comment>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="16" name="cid">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="16" name="sid">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="44" parent="16" name="cid">
+      <ColNames>cid</ColNames>
+    </index>
+    <index id="45" parent="16" name="sid">
+      <ColNames>sid</ColNames>
+    </index>
+    <key id="46" parent="16" name="PRIMARY">
+      <ColNames>scid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="16" name="studentcourse_ibfk_2">
+      <ColNames>cid</ColNames>
+      <RefSchemaName>electivecoursedb</RefSchemaName>
+      <RefTableName>course</RefTableName>
+      <RefColNames>cid</RefColNames>
+    </foreign-key>
+    <foreign-key id="48" parent="16" name="studentcourse_ibfk_1">
+      <ColNames>sid</ColNames>
+      <RefSchemaName>electivecoursedb</RefSchemaName>
+      <RefTableName>student</RefTableName>
+      <RefColNames>sid</RefColNames>
+    </foreign-key>
+    <column id="49" parent="17" name="tid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="17" name="teachername">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="17" name="teacherpassword">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="52" parent="17" name="PRIMARY">
+      <ColNames>tid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
